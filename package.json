@@ -1,0 +1,19 @@
+{
+  "name": "frm-salesforce",
+  "version": "1.0.0",
+  "description": "Connecting Formidable Forms to SalesForce via the REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Matthew Rosenberg ( Workshop Digital )",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sync": "^0.6.2",
+    "include-all": "^3.0.1"
+  }
+}
