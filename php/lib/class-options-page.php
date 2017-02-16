@@ -12,31 +12,14 @@ class FRMSF_Admin_Options {
 	private $auth_nonce     = 'gf-salesforce-auth';
 	private $exchange_nonce = 'gf-salesforce-exchange';
 
-	public function __construct() {
 
+	public function __construct() {
 		$this->options = get_option( $this->option_group );		
 
 		add_action( 'admin_menu',        array( $this, 'add_submenu_item'  ) );
 		add_action( 'admin_init',        array( $this, 'register_settings' ) );	
 		add_action( 'admin_init',        array( $this, 'get_tokens'        ) );
 		add_filter( 'whitelist_options', array( $this, 'whitelist_options' ), 11 );
-	}
-
-
-	public function send_lead( $data ) {
-
-		$url  = $this->options[ 'instance_url' ] . '/services/data/v39.0/sobjects/Lead/';
-
-		$args = array(
-			'method' => 'POST',
-			'headers' => array(
-				'content-type' => 'application/json',
-				'Authorization' => "{$this->options[ 'token_type' ]} {$this->options[ 'access_token' ]}" 
-			),
-			'body' => json_encode( $data )
-		);
-
-		return wp_remote_post( $url, $args );		
 	}
 
 
@@ -70,6 +53,7 @@ class FRMSF_Admin_Options {
 				$this->options[ 'signature' ]     = $data->signature;
 				$this->options[ 'token_type' ]    = $data->token_type;
 
+				set_transient( "{$this->option_group}_token", $data->access_token, 3600 );
 				update_option( $this->option_group, $this->options );
 			}
 
