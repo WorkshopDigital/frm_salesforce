@@ -6,20 +6,51 @@ use \FB as FB;
 class FRMSF_Admin_Options {
 
   private $options;	
+	private $redirect_uri;  
+	private $logo_url;
   private $page           = 'frm_sales_force'; 
 	private $option_group   = 'frmsf';
-	private $redirect_uri   = 'https://www.workshopdigital.dev/wp-admin/admin.php?page=frm_sales_force';
 	private $auth_nonce     = 'gf-salesforce-auth';
 	private $exchange_nonce = 'gf-salesforce-exchange';
 
 
 	public function __construct() {
-		$this->options = get_option( $this->option_group );		
+
+		$this->options      = get_option( $this->option_group );		
+		$this->redirect_uri = admin_url( 'admin.php?page=' . $this->page );
+		$this->logo_url     = FRMSF_URL . '/images/salesforce-logo.svg';
 
 		add_action( 'admin_menu',        array( $this, 'add_submenu_item'  ) );
 		add_action( 'admin_init',        array( $this, 'register_settings' ) );	
 		add_action( 'admin_init',        array( $this, 'get_tokens'        ) );
 		add_filter( 'whitelist_options', array( $this, 'whitelist_options' ), 11 );
+	}
+
+
+	public function tab_url( $tab_id ) {
+
+		return esc_html( $this->redirect_uri . '&tab=' . $tab_id );
+	}
+
+
+	public function tab_class( $tab_id ) {
+		$base_class   = 'nav-tab';
+		$active_class = 'nav-tab-active';
+		$current_tab  = $_REQUEST[ 'tab' ];
+
+		return isset( $current_tab ) && $tab_id === $current_tab ? $base_class . ' ' . $active_class : $base_class;
+	}
+
+
+	public function is_active_tab( $tab_id ) {
+
+		return ( isset( $_REQUEST[ 'tab' ]  ) && $tab_id === $_REQUEST[ 'tab' ] );
+	}
+
+
+	public function ready_to_authorize() {
+
+		return $this->options[ 'client_id' ] && $this->options[ 'client_secret' ];
 	}
 
 
@@ -71,14 +102,12 @@ class FRMSF_Admin_Options {
 	}
 
 
-
-
 	public function add_submenu_item() {
 
 		add_submenu_page( 
 			'formidable', 
-			'SalesForce', 
-			'SalesForce', 
+			'Salesforce', 
+			'Salesforce', 
 			'frm_view_forms', 
 			$this->page, 
 			array( $this, 'options_page_output' )		
@@ -90,21 +119,20 @@ class FRMSF_Admin_Options {
 
 		register_setting( 
 			$this->page,
-			$this->option_group
+			$this->option_group,
+			array( $this, 'settings_validate' )			
 		);
-
 
     add_settings_section(
 	    $this->option_group, 
-	    'Client Setup',
-	    array( $this, 'client_setup_section' ),
+	    null,
+	    null,
 			$this->page	     
     );  		
 
-
 	  add_settings_field(
 	    'client_id',
-	    'Client ID',
+	    esc_html__( 'Client ID', 'frmsf' ),
 	    array( $this, 'client_id_callback' ),
 	    $this->page, 
 	    $this->option_group 
@@ -112,7 +140,7 @@ class FRMSF_Admin_Options {
 
 	  add_settings_field(
 	    'client_secret', 
-	    'Client Secret', 
+	    esc_html__( 'Client Secret', 'frmsf' ),
 	    array( $this, 'client_secret_callback' ), 
 	    $this->page,  
 	    $this->option_group
@@ -120,12 +148,18 @@ class FRMSF_Admin_Options {
 	}
 
 
-	public function client_setup_section() {
+	public function settings_validate( $args ) {
 
-		$html  = '<p>Please enter your Salesforce client information.</p>';
-		$html .= '<pre><code>' . get_bloginfo( 'url' ) . '</code></pre>';
-		echo $html;
-	}	
+		if( empty( $args[ 'client_id' ] ) ) {
+			add_settings_error( $this->page, 'client_id', 'Please enter a Client ID' );
+		}
+
+		if( empty( $args[ 'client_secret' ] ) ) {
+			add_settings_error( $this->page, 'client_secret', 'Please enter a Client Secret' );
+		}
+
+		return $args;
+	}
 
 
 	public function client_id_callback() {
@@ -150,6 +184,7 @@ class FRMSF_Admin_Options {
 
 		require_once __DIR__ . '/../views/admin-option-page.php';
 	}
+
 }
 new FRMSF_Admin_Options;
 

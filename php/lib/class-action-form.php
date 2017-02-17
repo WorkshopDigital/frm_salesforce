@@ -3,8 +3,6 @@
 namespace FRMSF\Lib;
 use \FrmFormAction as FrmFormAction;
 use \WP_Error as WP_Error;
-use \FB as FB;
-
 
 class FrmSalesForceAction extends FrmFormAction {
 
@@ -258,7 +256,7 @@ class FrmSalesForceAction extends FrmFormAction {
 	}
 
 
-	private function get_token() {
+	private function refresh_token() {
 		$opts     = $this->options;
 		$url_base = 'https://login.salesforce.com/services/oauth2/token';
 		$params   = array(
@@ -292,7 +290,7 @@ class FrmSalesForceAction extends FrmFormAction {
 		$data = array();
 
 		if( false === ( $access_token = get_transient( "{$this->option_group}_token" ) ) ) {
-			$this->get_token(); 
+			$this->refresh_token(); 
 		}
 
 		$url  = $this->options[ 'instance_url' ] . '/services/data/v39.0/sobjects/Lead/';
@@ -302,12 +300,9 @@ class FrmSalesForceAction extends FrmFormAction {
 
 			if( 'None' === $key ) continue;
 
-FB::log( $key );
 			$data[ $key ] = $v;
 
 		endforeach;	
-
-		FB::log( $data );
 
 		$args = array(
 			'method' => 'POST',
@@ -320,13 +315,10 @@ FB::log( $key );
 
 		$response = wp_remote_post( $url, $args );
 
-FB::log( $response );
 		if ( is_wp_error( $response ) ) {
 			$error_message = $response->get_error_message();
 			error_log( $error_message );
 		}
-
-
 
 		if( 201 !== wp_remote_retrieve_response_code( $response ) ) {
 			$body = wp_remote_retrieve_body( $response );

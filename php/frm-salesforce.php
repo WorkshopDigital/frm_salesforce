@@ -1,14 +1,15 @@
 <?php
 /*
-Plugin Name: Formidable Forms Salesforce Integration
-Description: Connect Formidable Forms to SalesForce's REST API
-Version: 2.0
-Author URI: https://workshopdigital.com
-Author: Matthew Rosenberg ( Workshop Digital )
+	* Plugin Name: Formidable Forms Salesforce Integration
+	* Description: Connect Formidable Forms to SalesForce's REST API
+	* Version: 2.0
+	* Author URI: https://workshopdigital.com
+	* Author: Matthew Rosenberg ( Workshop Digital )
+	* Text Domain: frmsf
+	* Domain Path: /languages
 */
 
 namespace FRMSF;
-use \FB as FB;
 
 class FRM_Sales_Force {
 
