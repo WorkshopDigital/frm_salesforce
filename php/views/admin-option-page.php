@@ -120,7 +120,7 @@
 
 		<?php if( $this->is_active_tab( 'authorize' ) ) : ?>
 
-			<div id="post-body" class="metabox-holder">	
+			<div id="post-body" class="metabox-holder columns-2">	
 
 				<!-- main content -->
 				<div id="post-body-content">
@@ -135,14 +135,14 @@
 							<h2 class="hndle"><span><?php _e( 'Authorize with Salesforce', 'frmsf' ); ?></span>
 							</h2>
 
-							<div class="inside">
+							<div style="text-align:center;" class="inside">
 
 								<?php 
 
 									if( $this->ready_to_authorize() ) :
 
 										printf( 
-											'<img style="width:100px;padding:2rem;" src="%s" alt="%s"/>', 
+											'<img style="display:block;width:100px;padding:2rem;margin:0 auto;" src="%s" alt="%s"/>', 
 											$this->logo_url,
 											__( 'Authorize with Salesforce', 'frmsf' )
 										);
@@ -157,7 +157,7 @@
 
 										else :
 
-											echo '<h2>' . __( 'Please save your client ID and secret before authorizing this app.' ) . '</h2>';
+											echo '<h2>' . __( 'Please save your client ID and secret before authorizing this app.', 'frmsf' ) . '</h2>';
 
 										endif;	
 								?>	
@@ -172,6 +172,44 @@
 
 				</div>
 				<!-- post-body-content -->
+
+				<!-- sidebar -->
+				<div id="postbox-container-1" class="postbox-container">
+
+					<div class="meta-box-sortables">
+
+						<div class="postbox">
+
+							<div class="handlediv" title="Click to toggle"><br></div>
+							<!-- Toggle -->
+
+							<h2 class="hndle"><span><?php _e( 'Authorization Status', 'frmsf' ); ?></span></h2>
+
+							<div class="inside">
+
+								<?php if( $this->is_connected() ) : ?>
+
+									<span style="display:block;color:rgb(70, 180, 80);font-size:4rem;width:100%;height:100%;" class="dashicons dashicons-yes"></span>
+									<p>You're connected to Salesforce.</p>
+
+								<?php else : ?>
+
+									<span style="display:block;color:rgb(220, 50, 50);font-size:4rem;width:100%;height:100%;" class="dashicons dashicons-no"></span>
+									<p>Please check your configuration.</p>									
+
+								<?php endif; ?>
+
+							</div>
+							<!-- .inside -->
+
+						</div>
+						<!-- .postbox -->
+
+					</div>
+					<!-- .meta-box-sortables -->
+
+				</div>
+				<!-- #postbox-container-1 .postbox-container -->				
 
 			</div>
 			<!-- #post-body .metabox-holder .columns-2 -->

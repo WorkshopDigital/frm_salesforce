@@ -153,17 +153,44 @@ class FrmSalesForceAction extends FrmFormAction {
 		$this->options = get_option( $this->option_group );		
 
 		$action_ops = array(
-		    'classes'   => 'dashicons dashicons-cloud',
+		    'classes'   => 'frmsf-icon',
 		    'limit'     => 99,
 		    'active'    => true,
 		    'priority'  => 50,
 		);
 
-	  $this->FrmFormAction( $this->action_name, __( 'Sales Force', 'formidable' ), $action_ops );
-		add_action( "frm_trigger_{$this->action_name}_create_action", array( $this, 'send_lead' ), 10, 3);
+	  $this->FrmFormAction( $this->action_name, __( 'Salesforce', 'formidable' ), $action_ops  );
+		add_action( 'admin_head-toplevel_page_formidable',  array( $this, 'form_action_styles' ) );
+		add_action( "frm_trigger_{$this->action_name}_create_action", array( $this, 'send_lead' ), 10, 3);		
 	}
 
-	function select_script() {
+
+	public function form_action_styles() {
+		$logo = FRMSF_URL . '/images/salesforce-logo.svg';
+?>
+<style>
+
+.frmsf-icon:before {
+	content: 'salesforce';
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	width:30px;
+	height:20px;  
+	background-image: url( <?php echo $logo; ?> );
+	background-size: contain;
+	background-repeat: no-repeat; 
+	background-position: center;
+	display: inline-block;
+}
+
+</style>
+
+<?php		
+	}
+
+
+	public function select_script() {
 		$data = json_encode( $this->sf_fields );
 ?>
 <script>

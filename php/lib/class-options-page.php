@@ -36,15 +36,22 @@ class FRMSF_Admin_Options {
 	public function tab_class( $tab_id ) {
 		$base_class   = 'nav-tab';
 		$active_class = 'nav-tab-active';
-		$current_tab  = $_REQUEST[ 'tab' ];
+		$current_tab  = isset( $_REQUEST[ 'tab' ] ) ? $_REQUEST[ 'tab' ] : 'configure';
 
-		return isset( $current_tab ) && $tab_id === $current_tab ? $base_class . ' ' . $active_class : $base_class;
+		return $tab_id === $current_tab ? $base_class . ' ' . $active_class : $base_class;
+	}
+
+
+	public function is_connected() {
+
+		return isset( $this->options[ 'refresh_token' ] );
 	}
 
 
 	public function is_active_tab( $tab_id ) {
+		$current_tab  = isset( $_REQUEST[ 'tab' ] ) ? $_REQUEST[ 'tab' ] : 'configure';
 
-		return ( isset( $_REQUEST[ 'tab' ]  ) && $tab_id === $_REQUEST[ 'tab' ] );
+		return $current_tab === $tab_id;
 	}
 
 
