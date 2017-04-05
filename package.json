@@ -1,6 +1,6 @@
 {
   "name": "frm-salesforce",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Connecting Formidable Forms to SalesForce via the REST API",
   "main": "index.js",
   "scripts": {

@@ -2,7 +2,7 @@
 /*
 	* Plugin Name: Formidable Forms Salesforce Integration
 	* Description: Connect Formidable Forms to SalesForce's REST API
-	* Version: 2.0
+	* Version: 1.0.1
 	* Author URI: https://workshopdigital.com
 	* Author: Matthew Rosenberg ( Workshop Digital )
 	* Text Domain: frmsf

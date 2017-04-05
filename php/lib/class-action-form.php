@@ -3,6 +3,7 @@
 namespace FRMSF\Lib;
 use \FrmFormAction as FrmFormAction;
 use \WP_Error as WP_Error;
+use \FB as FB;
 
 class FrmSalesForceAction extends FrmFormAction {
 
@@ -39,7 +40,7 @@ class FrmSalesForceAction extends FrmFormAction {
 		), 
 		'Description' => array( 
 			'type' => 'string' 
-		), 
+		), 	
 		'Email' => array( 
 			'type' => 'string' 
 		), 
@@ -49,6 +50,9 @@ class FrmSalesForceAction extends FrmFormAction {
 		'FirstName' => array( 
 			'type' => 'string' 
 		), 	
+		'GCLID' => array( 
+			'type' => 'string' 
+		), 			
 		'HasOptedOutOfEmail' => array( 
 			'type' => 'string' 
 		), 	
@@ -324,8 +328,7 @@ class FrmSalesForceAction extends FrmFormAction {
 
 		foreach( (array) $entry->metas as $k => $v ) :
 			$key = $action->post_content[ $k ];
-
-			if( 'None' === $key ) continue;
+			if( 'None' === $key || empty( $key ) ) continue;
 
 			$data[ $key ] = $v;
 
@@ -354,6 +357,5 @@ class FrmSalesForceAction extends FrmFormAction {
 			$error = new WP_Error( $code, $body );
 			error_log( $body  );			
 		}
-
 	}	
 }
