@@ -1,6 +1,7 @@
 <?php
 
 namespace FRMSF\Lib;
+use \FrmEntry as FrmEntry;
 use \FrmFormAction as FrmFormAction;
 use \WP_Error as WP_Error;
 use \FB as FB;
@@ -8,10 +9,13 @@ use \FB as FB;
 class FrmSalesForceAction extends FrmFormAction {
 
 
-	private $sf_fields = array( 
+	private $sf_fields = array( 		
 		'AnnualRevenue' => array( 
 			'type' => 'currency' 
 		), 
+		'campaign__c' => array(
+			'type' => 'string' 			
+		),
 		'City' => array( 
 			'type' => 'string' 
 		), 
@@ -50,7 +54,7 @@ class FrmSalesForceAction extends FrmFormAction {
 		'FirstName' => array( 
 			'type' => 'string' 
 		), 	
-		'GCLID' => array( 
+		'GCLID__c' => array( 
 			'type' => 'string' 
 		), 			
 		'HasOptedOutOfEmail' => array( 
@@ -69,6 +73,9 @@ class FrmSalesForceAction extends FrmFormAction {
 		'Jigsaw' => array( 
 			'type' => 'string' 
 		), 	
+		'medium__c' => array(
+			'type' => 'string' 			
+		),
 		'LastName' => array( 
 			'type' => 'string' 
 		), 	
@@ -112,6 +119,9 @@ class FrmSalesForceAction extends FrmFormAction {
 		'Salutation' => array( 
 			'type' => 'string' 
 		), 	
+		'source__c' => array(
+			'type' => 'string' 			
+		),
 		'State' => array( 
 			'type' => 'string' 
 		), 	
@@ -165,7 +175,7 @@ class FrmSalesForceAction extends FrmFormAction {
 
 	  $this->FrmFormAction( $this->action_name, __( 'Salesforce', 'formidable' ), $action_ops  );
 		add_action( 'admin_head-toplevel_page_formidable',  array( $this, 'form_action_styles' ) );
-		add_action( "frm_trigger_{$this->action_name}_create_action", array( $this, 'send_lead' ), 10, 3);		
+		add_action( "frm_trigger_{$this->action_name}_create_action", array( $this, 'update_entry' ), 10, 3);		
 	}
 
 
@@ -317,14 +327,13 @@ class FrmSalesForceAction extends FrmFormAction {
 	}
 
 
-	public function send_lead( $action, $entry, $form ) {
-		$data = array();
+	private function send_lead( $action, $entry ) {
+		$data = [];		
+		$url  = $this->options[ 'instance_url' ] . '/services/data/v39.0/sobjects/Lead/';
 
 		if( false === ( $access_token = get_transient( "{$this->option_group}_token" ) ) ) {
 			$this->refresh_token(); 
-		}
-
-		$url  = $this->options[ 'instance_url' ] . '/services/data/v39.0/sobjects/Lead/';
+		}		
 
 		foreach( (array) $entry->metas as $k => $v ) :
 			$key = $action->post_content[ $k ];
@@ -350,12 +359,77 @@ class FrmSalesForceAction extends FrmFormAction {
 			error_log( $error_message );
 		}
 
-		if( 201 !== wp_remote_retrieve_response_code( $response ) ) {
-			$body = wp_remote_retrieve_body( $response );
-			$code = wp_remote_retrieve_response_code( $response ); 
+		$body = wp_remote_retrieve_body( $response );
+		$code = wp_remote_retrieve_response_code( $response ); 		
 
+		if( 201 !== $code ) {
 			$error = new WP_Error( $code, $body );
 			error_log( $body  );			
+		}		
+
+		return json_decode( $body );
+	}
+
+
+	private function format_response_entry( $k, $v ) {
+
+		switch( $k ) {
+			case 'errorCode':
+				$entry = sprintf( '<p><span style="color:red;font-weight:bold;">%s:</span> %s</p>', $k, $v );
+				break;
+			case 'fields':
+				$entry .= sprintf( '<p><strong>%s:</strong> %s</p>', $k, implode( ', ', $v ) );
+				break;
+			case 'errors':
+				$entry .= sprintf( '<p><strong>%s:</strong> %s</p>', $k, implode( ', ', $v ) );
+				break;				
+			default:
+				$entry .= sprintf( '<p><strong>%s:</strong> %s</p>', $k, $v );
+		}		
+
+		return $entry;
+	}
+
+
+
+	private function format_response( $response ) {
+		$entries   = is_array( $response ) ? $response : [ $response ];
+		$container = '<ul>%s</ul>';
+		$items     = [];
+
+		foreach( $entries as $entry ) {
+
+		 $item = ( array ) $entry;
+
+			$html = array_map( 
+				array( $this, 'format_response_entry' ), 
+				array_keys( $item ), 
+				$item 
+			);
+
+			$items[] = sprintf( '<li>%s</li>', implode( '', $html ) );
 		}
-	}	
+
+		return sprintf( $container, implode( '', $items ) );
+	}
+
+
+	public function update_entry( $action, $entry, $form ) {
+		global $wpdb;
+
+		$description = ( array ) maybe_unserialize( $entry->description );
+
+		$data        = $this->send_lead( $action, $entry );
+
+		if( $data ) {
+			$description[ 'salesforce' ] = $this->format_response( $data );
+		}
+
+    $result = $wpdb->update($wpdb->prefix .'frm_items',
+	    array( 'description' => serialize( $description ) ),
+	    array( 'id' => $entry->id )
+    );
+
+    return $result;
+	}
 }
