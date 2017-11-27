@@ -1,0 +1,932 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"maybe",
+				"maybe_unserialize\tWP Function"
+			],
+			[
+				"de",
+				"description"
+			],
+			[
+				"lam",
+				"lambda"
+			],
+			[
+				"the",
+				"theta_reg"
+			],
+			[
+				"theta",
+				"thetaJ"
+			],
+			[
+				"thet",
+				"thetaJ"
+			],
+			[
+				"s",
+				"srlis"
+			],
+			[
+				"sl",
+				"sblis"
+			],
+			[
+				"A",
+				"AdWordsCampaigns"
+			],
+			[
+				"report",
+				"reportUrl"
+			],
+			[
+				"data",
+				"dataPoint"
+			],
+			[
+				"tas",
+				"taskRequests"
+			],
+			[
+				"project",
+				"projectTasks"
+			],
+			[
+				"proj",
+				"projectId"
+			],
+			[
+				"client",
+				"clientId"
+			],
+			[
+				"string",
+				"stringified"
+			],
+			[
+				"reques",
+				"requestUrl"
+			],
+			[
+				"harv",
+				"harvestInvoice"
+			],
+			[
+				"input",
+				"inputFile"
+			],
+			[
+				"String",
+				"Stringify"
+			],
+			[
+				"validat",
+				"validationResults"
+			],
+			[
+				"val",
+				"validationResults"
+			],
+			[
+				"in",
+				"inputFile"
+			],
+			[
+				"tick",
+				"tickEntry"
+			],
+			[
+				"tra",
+				"transporters"
+			],
+			[
+				"start",
+				"startIndex"
+			],
+			[
+				"goo",
+				"googleAnalyticsSourcesPayload"
+			],
+			[
+				"google",
+				"googleAnalyticsSourcesRun"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"max",
+				"maxResults"
+			],
+			[
+				"star",
+				"startIndex"
+			],
+			[
+				"fet",
+				"fetchGoogleSources"
+			],
+			[
+				"header",
+				"headerMap"
+			],
+			[
+				"head",
+				"headerMap"
+			],
+			[
+				"format",
+				"formatRow"
+			],
+			[
+				"auth",
+				"authHeader"
+			],
+			[
+				"request",
+				"Request"
+			],
+			[
+				"final",
+				"finalUrl"
+			],
+			[
+				"ret",
+				"retryLimit"
+			],
+			[
+				"robot",
+				"robotRulesModels"
+			],
+			[
+				"_fetch",
+				"_fetchRobotRules"
+			],
+			[
+				"Fetch",
+				"FetchRobotRules"
+			],
+			[
+				"cl",
+				"client_name"
+			],
+			[
+				"cleint",
+				"client_id"
+			],
+			[
+				"Client",
+				"ClientModel"
+			],
+			[
+				"_fetc",
+				"_fetchClients"
+			],
+			[
+				"re",
+				"retryLimit"
+			],
+			[
+				"Check",
+				"CheckUrls"
+			],
+			[
+				"adwords",
+				"adWordsUser"
+			],
+			[
+				"if",
+				"ife\tif … else"
+			],
+			[
+				"upload",
+				"uploadToGcp"
+			],
+			[
+				"con",
+				"convertMp3ToFlac"
+			],
+			[
+				"create",
+				"createWriteStream"
+			],
+			[
+				"mp3",
+				"mp3Path"
+			],
+			[
+				"langau",
+				"languageService"
+			],
+			[
+				"file",
+				"filePath"
+			],
+			[
+				"temp",
+				"tempDir"
+			],
+			[
+				"watch",
+				"watchDir"
+			],
+			[
+				"work",
+				"workSheetId"
+			],
+			[
+				"wor",
+				"workSheetId"
+			],
+			[
+				"shee",
+				"sheetId"
+			],
+			[
+				"name",
+				"Name"
+			],
+			[
+				"str",
+				"strMarket"
+			],
+			[
+				"database",
+				"Database"
+			],
+			[
+				"ad",
+				"adMetrics"
+			],
+			[
+				"Campaign",
+				"CampaignBuilder"
+			],
+			[
+				"campaign",
+				"CampaignBuilder"
+			],
+			[
+				"update",
+				"updateSheets"
+			],
+			[
+				"end",
+				"endDate"
+			],
+			[
+				"_",
+				"_fetchBingData"
+			],
+			[
+				"Parse",
+				"ParseDate"
+			],
+			[
+				"error",
+				"errorDescription"
+			],
+			[
+				"req",
+				"requestHandler"
+			],
+			[
+				"out",
+				"outputPath"
+			],
+			[
+				"add",
+				"addToArchive"
+			],
+			[
+				"get_the_t",
+				"get_the_title\tWP Function"
+			],
+			[
+				"rewind",
+				"rewind_posts\tWP Function"
+			],
+			[
+				"ca",
+				"campaigns"
+			],
+			[
+				"form",
+				"formattedData"
+			],
+			[
+				"write",
+				"writeData"
+			],
+			[
+				"find",
+				"findByLocation"
+			],
+			[
+				"xl",
+				"xlsxPath"
+			],
+			[
+				"fetch",
+				"fetchBingData"
+			],
+			[
+				"read",
+				"readStream"
+			],
+			[
+				"zip",
+				"zipFile"
+			],
+			[
+				"xls",
+				"xlsxPath"
+			],
+			[
+				"jwt",
+				"jwtClient"
+			],
+			[
+				"is",
+				"isInGroup"
+			],
+			[
+				"group",
+				"groups"
+			],
+			[
+				"model",
+				"modelSlug"
+			],
+			[
+				"iamge",
+				"image_pos"
+			],
+			[
+				"develop",
+				"develop_src"
+			],
+			[
+				"ini",
+				"initialSeason"
+			],
+			[
+				"season",
+				"seasonCollection"
+			],
+			[
+				"che",
+				"checkUrls"
+			],
+			[
+				"robots",
+				"robotsUrl"
+			],
+			[
+				"handle",
+				"handleTimeOut"
+			],
+			[
+				"campa",
+				"campaignService"
+			],
+			[
+				"key",
+				"keywordService"
+			],
+			[
+				"get",
+				"getKeywords"
+			],
+			[
+				"back",
+				"background-color: "
+			],
+			[
+				"craw",
+				"crawlDelay"
+			],
+			[
+				"getAd",
+				"getAdGroups"
+			],
+			[
+				"city",
+				"cityGuide"
+			],
+			[
+				"primi",
+				"promiseWhile"
+			],
+			[
+				"c",
+				"chaiAsPromised"
+			],
+			[
+				"cam",
+				"campaign"
+			],
+			[
+				"divi",
+				"divisor"
+			],
+			[
+				"set",
+				"setKeywordUrls"
+			],
+			[
+				"m",
+				"mqlHandler"
+			],
+			[
+				"clie",
+				"clientName"
+			],
+			[
+				"AdGr",
+				"AdGroupModel"
+			],
+			[
+				"ge",
+				"generateReport"
+			],
+			[
+				"fina",
+				"finalUrl"
+			],
+			[
+				"total",
+				"totalResults"
+			],
+			[
+				"save",
+				"saveEntries"
+			],
+			[
+				"del",
+				"deleteAll"
+			],
+			[
+				"clien",
+				"clientId"
+			],
+			[
+				"url",
+				"urls"
+			],
+			[
+				"keyword",
+				"keywordModel"
+			],
+			[
+				"Adwords",
+				"adwordsReport"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"a",
+				"articleView"
+			],
+			[
+				"articl",
+				"ArticleView"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"current",
+				"currentSeason"
+			],
+			[
+				"article",
+				"articleSetup"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Better CoffeeScript/CoffeeScript.sublime-build",
+					""
+				],
+				[
+					"Packages/Better CoffeeScript/CoffeeScript.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/Better CoffeeScript/CoffeeScript.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 168.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"ma",
+				"Material Theme: Activate theme"
+			],
+			[
+				"material",
+				"Material Theme: Activate theme"
+			],
+			[
+				"",
+				"Material Theme: Activate theme"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"edit",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"editor",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"jso",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"P",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"prett",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 496.0
+	},
+	"console":
+	{
+		"height": 251.0,
+		"history":
+		[
+			"sublime.log_indexing(True)",
+			"sublime.log_indexing(True",
+			"clear()",
+			"clear",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/matthewrosenberg/repos/frm-salesforce/composer.json",
+		"/Users/matthewrosenberg/repos/frm-salesforce/php/lib/class-action-form.php",
+		"/Users/matthewrosenberg/repositories/frm-salesforce/LICENSE.md",
+		"/Users/matthewrosenberg/repos/frm-salesforce/package.json",
+		"/Users/matthewrosenberg/repos/frm-salesforce/php/lib/class-options-page.php",
+		"/Users/matthewrosenberg/repos/frm-salesforce/tasks/register/build.js",
+		"/Users/matthewrosenberg/repositories/frm-salesforce/tasks/register/build.js",
+		"/Users/matthewrosenberg/repos/frm-salesforce/tasks/config/watch.js",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex3/ex3/lib/submitWithConfiguration.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex2/ex2/ex2.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex2/ex2/ex2_reg.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex2/ex2/costFunctionReg.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex2/ex2/ex2data2.txt",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex2/ex2/mapFeature.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex2/ex2/sigmoid.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex2/ex2/costFunction.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex2/ex2/predict.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/machine-learning-ex2/ex2/plotData.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/Machine Learning/machine-learning-ex1/ex1/ex1_multi.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/Machine Learning/machine-learning-ex1/ex1/gradientDescent.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/Machine Learning/machine-learning-ex1/ex1/gradientDescentMulti.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/Machine Learning/machine-learning-ex1/ex1/featureNormalize.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/Machine Learning/machine-learning-ex1/ex1/ex1.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/Machine Learning/machine-learning-ex1/ex1/computeCost.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/Machine Learning/machine-learning-ex1/ex1/plotData.m",
+		"/Users/matthewrosenberg/Desktop/Coursera/Machine Learning/machine-learning-ex1/ex1/warmUpExercise.m",
+		"/Users/matthewrosenberg/repositories/balconyrock/app/modules/campaignMetrics.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/fixtures/bing-campaigns.json",
+		"/Users/matthewrosenberg/repositories/balconyrock/fixtures/adwords-campaigns.json",
+		"/Users/matthewrosenberg/repositories/balconyrock/test/campaign-metrics.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/fixtures/adwords-campaigns.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/test/request-bing.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/fixtures/bing-campaigns.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/test/request-adwords.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/app/modules/campaignBuilder.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/app/modules/analytics.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/app/modules/parseLifeStorageReport.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/app/modules/bing.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/fixtures/bing.json",
+		"/Users/matthewrosenberg/repositories/balconyrock/app/modules/cleanup.js",
+		"/Users/matthewrosenberg/Downloads/s2member/s2member.php",
+		"/Users/matthewrosenberg/repositories/wsddotcom/repos/wsddotcom",
+		"/Users/matthewrosenberg/vagrant-local/Vagrantfile",
+		"/Users/matthewrosenberg/vagrant-ml/Vagrantfile",
+		"/Users/matthewrosenberg/repos/unsquare/package.json",
+		"/Users/matthewrosenberg/repos/unsquare/app/modules/logger.js",
+		"/Users/matthewrosenberg/.brubeck/brubeck.json",
+		"/Users/matthewrosenberg/repositories/quartet/app/requests/get-harvest-invoice.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/models/tick-project.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/models/tick-task.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/init/sequelize.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/requests/get-tick-project-tasks.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/requests/get-tick-task-entries.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/requests/index.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/index.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/requests/get-tick-project.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/models/harvest-invoice.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/requests/get-tick-client.js",
+		"/Users/matthewrosenberg/repositories/quartet/.gitignore",
+		"/Users/matthewrosenberg/repositories/quartet/app/database.sqlite",
+		"/Users/matthewrosenberg/repositories/quartet/app/models/tick-entry.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/requests/get-tick-task.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/requests/get-tick-entry.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/helpers/pagination.js",
+		"/Users/matthewrosenberg/.projects/quartet.json",
+		"/Users/matthewrosenberg/repositories/quartet/app/models/tick-client.js",
+		"/Users/matthewrosenberg/repositories/quartet/package.json",
+		"/Users/matthewrosenberg/repositories/quartet/app/requests/get-tick-entries.js",
+		"/Users/matthewrosenberg/repositories/quartet/app/models/tick-entries.js",
+		"/Users/matthewrosenberg/.projects/bluerondo.json",
+		"/Users/matthewrosenberg/repositories/bluerondo/package.json",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/index.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/logs/combined.log",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/init/logger.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/analytics/sources.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/application.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/helpers/last-updated.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/temp.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/helpers/fetch-google-analytics.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/init/database.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/helpers/get-clients.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/index.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/index.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/analytics/fetch.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/analytics/metrics.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/analytics/sources/payload.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/sources-class.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/analytics/sources/can-run.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/analytics/sources/index.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/sources/fetch.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/sources/save.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/sources/test.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/helpers/pagination.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/fetch.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/google/pagination.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/helpers/logger.js",
+		"/Users/matthewrosenberg/repositories/bluerondo/app/modules/services/service-class.js",
+		"/Users/matthewrosenberg/repositories/norwalk/app/routes/client/sentiment-analysis.js",
+		"/Users/matthewrosenberg/vagrant-brubeck/database/brubeck-init.sql",
+		"/Users/matthewrosenberg/vagrant-brubeck/provision/provision.sh",
+		"/Users/matthewrosenberg/vagrant-local/database/import-sql.sh",
+		"/Users/matthewrosenberg/vagrant-brubeck/Vagrantfile",
+		"/Users/matthewrosenberg/vagrant-local/vvv-config.yml",
+		"/Users/matthewrosenberg/vagrant-local/config/apt-source-append.list",
+		"/Users/matthewrosenberg/repositories/norwalk/node_modules/swagger-tools/middleware/helpers.js",
+		"/Users/matthewrosenberg/repositories/norwalk/node_modules/swagger-converter/index.js",
+		"/Users/matthewrosenberg/repositories/norwalk/node_modules/ajv/dist/ajv.bundle.js",
+		"/Users/matthewrosenberg/repositories/norwalk/node_modules/swagger-node-runner/index.js",
+		"/Users/matthewrosenberg/repositories/norwalk/node_modules/swagger-tools/middleware/swagger-ui/swagger-ui.js",
+		"/Users/matthewrosenberg/repositories/norwalk/api/swagger/call.yaml",
+		"/Users/matthewrosenberg/repositories/norwalk/api/swagger/components/schemas/Call.yaml",
+		"/Users/matthewrosenberg/repositories/norwalk/api/swagger/swagger.yaml",
+		"/Users/matthewrosenberg/repositories/norwalk/call.yaml",
+		"/Users/matthewrosenberg/repositories/norwalk/api/swagger/definitions/calls.yaml",
+		"/Users/matthewrosenberg/repositories/balconyrock/app/modules/application.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/app/modules/campaignMeta.js",
+		"/Users/matthewrosenberg/repositories/balconyrock/app/output/bing-combined-2017-09-01-2017-09-27-combined.csv",
+		"/Users/matthewrosenberg/repositories/norwalk/app/middleware/auth.js",
+		"/Users/matthewrosenberg/repositories/norwalk/package.json",
+		"/Users/matthewrosenberg/repositories/norwalk/app/middleware.js/auth.js",
+		"/Users/matthewrosenberg/repositories/norwalk/app/routes/calls/sentiment-analysis.js",
+		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/modules/database.js",
+		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/modules/fetch-robot-rules.js",
+		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/modules/set-robot-rules.js",
+		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/modules/check-urls.js",
+		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/models/final-url.js",
+		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/modules/application.js",
+		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/index.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 76.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.coffeecompile_output":
+	{
+		"height": 174.0
+	},
+	"output.exec":
+	{
+		"height": 297.0
+	},
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 142.0
+	},
+	"pinned_build_system": "Packages/Better CoffeeScript/CoffeeScript.sublime-build",
+	"project": "frm-salesforce.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"edit",
+				".editorconfig"
+			],
+			[
+				"",
+				"js/app.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

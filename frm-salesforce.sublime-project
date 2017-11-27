@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+  "settings": {
+    "xdebug": {
+	  	"path_mapping": {
+        "/srv/www": "/users/matthewrosenberg/vagrant-local/www"
+	  	},
+	  	"ide_key": "VVVDEBUG",
+	  	"port": 9000,
+			"url": "https://www.workshopdigital.dev",
+    }
+  }	
+}
