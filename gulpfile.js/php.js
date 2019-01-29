@@ -27,7 +27,6 @@ const banner = `<?php
  * Text Domain:       frm-salesforce
  * Domain Path:       /languages
  */
- */
  ?>
 `;
 

@@ -100,4 +100,23 @@ class Frm_Salesforce_Admin {
 
 	}
 
+
+	public function submenu_item() {
+
+		add_submenu_page( 
+			'formidable', 
+			'Salesforce', 
+			'Salesforce', 
+			'frm_view_forms', 
+			$this->plugin_name, 
+			array( $this, 'options_page_output' )		
+		);
+	}	
+
+	public function options_page_output() {
+
+		echo '<div id="root"></div>';
+
+	}	
+
 }
