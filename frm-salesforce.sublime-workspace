@@ -519,6 +519,50 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -543,10 +587,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 168.0,
-		"last_filter": "install",
+		"height": 354.0,
+		"last_filter": "list",
 		"selected_items":
 		[
+			[
+				"list",
+				"Package Control: List Packages"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -628,7 +676,7 @@
 				"Package Control: List Packages"
 			]
 		],
-		"width": 496.0
+		"width": 560.0
 	},
 	"console":
 	{
@@ -653,9 +701,12 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/matthewrosenberg/repos/frm-salesforce"
 	],
 	"file_history":
 	[
+		"/Users/matthewrosenberg/repos/frm-salesforce/frm-salesforce.sublime-project",
+		"/Users/matthewrosenberg/repos/phpinfo.txt",
 		"/Users/matthewrosenberg/repos/frm-salesforce/composer.json",
 		"/Users/matthewrosenberg/repos/frm-salesforce/php/lib/class-action-form.php",
 		"/Users/matthewrosenberg/repositories/frm-salesforce/LICENSE.md",
@@ -781,9 +832,7 @@
 		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/modules/fetch-robot-rules.js",
 		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/modules/set-robot-rules.js",
 		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/modules/check-urls.js",
-		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/models/final-url.js",
-		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/modules/application.js",
-		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/index.js"
+		"/Users/matthewrosenberg/repositories/RaggyWaltz/app/models/final-url.js"
 	],
 	"find":
 	{
@@ -794,6 +843,7 @@
 		"height": 158.0,
 		"where_history":
 		[
+			"/Users/matthewrosenberg/repos/frm-salesforce/output"
 		]
 	},
 	"find_state":
@@ -801,6 +851,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"FB::",
+			"dev"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -821,6 +873,130 @@
 			"sheets":
 			[
 			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
 		}
 	],
 	"incremental_find":
@@ -838,18 +1014,32 @@
 			[
 				0,
 				0,
-				1,
+				2,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.7,
 			1.0
 		]
 	},
@@ -869,6 +1059,10 @@
 	"output.unsaved_changes":
 	{
 		"height": 142.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
 	},
 	"pinned_build_system": "Packages/Better CoffeeScript/CoffeeScript.sublime-build",
 	"project": "frm-salesforce.sublime-project",
@@ -917,7 +1111,42 @@
 	{
 		"xdebug":
 		{
-			"hide_conflict": false
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"50":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"51":
+				{
+					"group": 0,
+					"index": 1
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
 		}
 	},
 	"show_minimap": false,
