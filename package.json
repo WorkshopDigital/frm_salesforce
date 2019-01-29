@@ -1,6 +1,6 @@
 {
   "name": "frm-salesforce",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Connecting Formidable Forms to SalesForce via the REST API",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,26 @@
   "author": "Matthew Rosenberg ( Workshop Digital )",
   "license": "ISC",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-uglify": "^2.1.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^2.0.0",
-    "grunt-sync": "^0.6.2",
-    "include-all": "^3.0.1"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@fortawesome/fontawesome-free": "^5.6.3",
+    "breakpoint-sass": "^2.7.1",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^5.0.2",
+    "gulp-header": "^2.0.7",
+    "gulp-livereload": "^4.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemap": "^1.0.1",
+    "gulp-wrap": "^0.14.0",
+    "handlebars": "^4.0.10",
+    "node-sass": "^4.11.0",
+    "rollup-stream": "^1.24.1",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
