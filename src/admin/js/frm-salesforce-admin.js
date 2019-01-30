@@ -1,14 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 import * as ReactDOM from 'react-dom';
-import { document } from 'global';
 
-class Hello extends React.Component {
-  render() {
-    return <div>Hello {this.props.toWhat}</div>;
-  }
+function FRMSalesforceApp() {
+	return (
+		<div className="frm-salesforce">
+    </div>		
+	);
 }
 
+
+
 ReactDOM.render(
-  <Hello toWhat="World" />,
-  document.getElementById('root')
+  <FRMSalesforceApp />,
+  document.getElementById('frm-salesforce-app')
 );

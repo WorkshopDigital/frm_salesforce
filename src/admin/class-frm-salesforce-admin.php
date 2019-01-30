@@ -96,7 +96,7 @@ class Frm_Salesforce_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/frm-salesforce-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/frm-salesforce-admin.js', array(), $this->version, true );
 
 	}
 
@@ -115,8 +115,7 @@ class Frm_Salesforce_Admin {
 
 	public function options_page_output() {
 
-		echo '<div id="root"></div>';
-
+		include_once plugin_dir_path( dirname( __FILE__ ) ) .  'admin/partials/frm-salesforce-admin-display.php';
 	}	
 
 }

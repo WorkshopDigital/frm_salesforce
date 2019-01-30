@@ -13,4 +13,12 @@
  */
 ?>
 
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<div class="wrap">
+	<h1><?php echo get_admin_page_title(); ?></h1>
+
+	<div id="frm-salesforce-app">
+		<noscript>
+			<p>This plugin requires javascript.</p>
+		</noscript>
+	</div>
+</div><!--.wrap-->

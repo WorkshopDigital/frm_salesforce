@@ -11,30 +11,19 @@ const { src, dest, parallel } = require( 'gulp' );
 function jsAdminReact() {
   return Rollup({
       input: 'src/admin/js/frm-salesforce-admin.js',
-      format: 'umd',
+      format: 'iife',
       external: [ 'global' ],
 			globals: {
 				'global': 'window'
 			},
       plugins: [       
+	      Resolve(),
 		    Babel({
+		    	sourceType: 'unambiguous',
 		      babelrc: false,
-		      presets: ['@babel/react'],
-		    }),	                 
-	      Resolve({
-	      	module:true,
-					main: true	      	
-	      }),
-	      // CommonJs({
-		     //  exclude: [
-		     //    'node_modules/**',
-		     //  ],
-		     //  namedExports: {
-		     //    'node_modules/react/index.js': ['Children', 'Component', 'PropTypes', 'createElement'],
-		     //    'node_modules/react-dom/index.js': ['render'],
-		     //  },	  
-	      // }),
-	      
+		      presets: ['@babel/preset-react'],
+		    }),	     	      
+	      CommonJs()		    
       ]
 
     })

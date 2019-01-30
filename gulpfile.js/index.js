@@ -7,10 +7,12 @@ const sass         = require( './sass' );
 const watch        = require( './watch' );
 const images       = require( './images' );
 const javascript   = require( './javascript' );
+const { webpack }  = require( './webpack' );
 
 exports.sass    = sass;
 exports.watch   = watch;
+exports.webpack = webpack;
 exports.default = series(
   clean,
-  parallel( php, images, javascript, sass )
+  parallel( php, images, webpack, sass )
 );
