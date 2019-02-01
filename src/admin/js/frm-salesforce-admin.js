@@ -1,16 +1,15 @@
-import React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import initStore from './redux/store'
+import App from './components/app'
 
-function FRMSalesforceApp() {
-	return (
-		<div className="frm-salesforce">
-    </div>		
-	);
-}
+const root  = document.getElementById('post-body-content')
+const store = initStore(root.dataset);
 
-
-
-ReactDOM.render(
-  <FRMSalesforceApp />,
-  document.getElementById('frm-salesforce-app')
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  root
 );

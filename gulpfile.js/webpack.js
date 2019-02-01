@@ -1,5 +1,6 @@
 const Path = require( 'path' );
 const Webpack = require( 'webpack' );
+const Reload  = require( 'gulp-livereload' );
 
 const config = {
 	entry: './admin/js/frm-salesforce-admin.js',
@@ -24,7 +25,8 @@ function webpack() {
 	  console.log(stats.toString());
 
 	  resolve()
-	}));
+	}))
+	.then(Reload);
 
 }
 

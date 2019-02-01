@@ -1,4 +1,8 @@
-import { createStore } from "redux";
-import rootReducer from "./reducers";
+import { createStore } from 'redux'
+import frmSalesforceApp from './reducers'
 
-export default createStore(rootReducer);
+function store(props) {
+	return createStore(frmSalesforceApp, props);
+}
+
+export default store;

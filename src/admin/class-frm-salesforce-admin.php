@@ -97,9 +97,24 @@ class Frm_Salesforce_Admin {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/frm-salesforce-admin.js', array(), $this->version, true );
-
+		
 	}
 
+	private function get_db_options() {
+		return get_option( $this->plugin_name );
+	}
+
+	private function create_nonce() {
+		return wp_create_nonce( $this->plugin_name );
+	}
+
+	private function serialize_props() {
+		return [
+        'endpoint' => esc_url_raw( rest_url() ),
+        'nonce' => $this->create_nonce(),
+        'data' => $this->get_db_options()
+    ];
+	}
 
 	public function submenu_item() {
 
@@ -114,7 +129,6 @@ class Frm_Salesforce_Admin {
 	}	
 
 	public function options_page_output() {
-
 		include_once plugin_dir_path( dirname( __FILE__ ) ) .  'admin/partials/frm-salesforce-admin-display.php';
 	}	
 
