@@ -43,6 +43,7 @@
     "vinyl-source-stream": "^2.0.0",
     "webpack": "^4.29.0",
     "webpack-dev-middleware": "^3.5.1",
-    "webpack-hot-middleware": "^2.24.3"
+    "webpack-hot-middleware": "^2.24.3",
+    "wpapi": "^1.2.1"
   }
 }
