@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import { 
 	UPDATE_CLIENT_ID, 
 	UPDATE_CLIENT_SECRET,
@@ -8,15 +7,20 @@ import {
 	API_FAILURE
 } from './actions';
 
-const initialState = {
+const initialStateWpApi = {
 	isFetching: false,
 	apiError: false,
 	apiErrorMsg: '',
+	endpoint: null,
+	nonce: null
+}
+
+const initialStateSalesForceCredentials = {
 	clientId: null,
 	clientSecret: null,
 }
 
-function wpApi(state = initialState, action) {
+export function wpApi(state = initialStateWpApi, action) {
 	switch(action.type) {
 		case POST_DATA:
 			return Object.assign({}, state, {
@@ -43,7 +47,7 @@ function wpApi(state = initialState, action) {
 	}
 }
 
-function salesForceCredentials(state = initialState, action) {
+export function salesForceCredentials(state = initialStateSalesForceCredentials, action) {
 	switch(action.type) {
 		case UPDATE_CLIENT_ID:
 			return Object.assign({}, state, {clientId: action.value});
@@ -53,10 +57,3 @@ function salesForceCredentials(state = initialState, action) {
 			return state;
 	}
 }
-
-const rootReducer = combineReducers({
-	salesForceCredentials,
-	wpApi	
-})
-
-export default rootReducer

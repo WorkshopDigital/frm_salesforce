@@ -17,6 +17,7 @@
 	<h1><?php echo get_admin_page_title(); ?></h1>
 	<?php settings_errors(); ?>
 	<?php $props = $this->serialize_props(); ?>
+	<?php //print_r(get_registered_settings()) ?>
 
 	<div id="poststuff">
 		<div id="post-body-content" 

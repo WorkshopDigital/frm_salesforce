@@ -100,20 +100,25 @@ class Frm_Salesforce_Admin {
 		
 	}
 
-	private function get_db_options() {
+	public function get_db_options() {
 		return get_option( $this->plugin_name );
 	}
 
+	public function set_db_options($settings) {
+		print_r($settings);
+		update_option( $this->plugin_name, $settings );
+	}
+
 	private function create_nonce() {
-		return wp_create_nonce( $this->plugin_name );
+		return wp_create_nonce( 'wp_rest' );
 	}
 
 	private function serialize_props() {
 		return [
-        'endpoint' => esc_url_raw( rest_url() ),
-        'nonce' => $this->create_nonce(),
-        'data' => $this->get_db_options()
-    ];
+			'endpoint' => esc_url_raw( rest_url() ),
+			'nonce'    => $this->create_nonce(),
+			'data'     => $this->get_db_options()
+		];
 	}
 
 	public function submenu_item() {
@@ -127,6 +132,35 @@ class Frm_Salesforce_Admin {
 			array( $this, 'options_page_output' )		
 		);
 	}	
+
+	public function register_salesforce_setting() {
+		register_setting( 'general', $this->plugin_name,  array(
+			'type' => 'object',
+			'description' => 'The Salesforce App Info',
+			'show_in_rest' => true,
+			'default' => array(
+				'client_id' => null,
+				'client_secret' => null
+			)
+		));	
+	}
+
+
+	public function register_salesforce_field() {
+		global $wp_rest_additional_fields, $wp_registered_settings;
+
+		register_rest_field(
+			'settings',
+			$this->plugin_name,
+			array(
+				'get_callback'    => array( $this, 'get_db_options' ),
+				'update_callback' => array( $this, 'set_db_options' )
+			)
+		);
+
+
+		
+	}
 
 	public function options_page_output() {
 		include_once plugin_dir_path( dirname( __FILE__ ) ) .  'admin/partials/frm-salesforce-admin-display.php';
