@@ -137,29 +137,23 @@ class Frm_Salesforce_Admin {
 		register_setting( 'general', $this->plugin_name,  array(
 			'type' => 'object',
 			'description' => 'The Salesforce App Info',
-			'show_in_rest' => true,
-			'default' => array(
-				'client_id' => null,
-				'client_secret' => null
-			)
+			'show_in_rest' => array(
+				'schema' => array(
+					'properties' => array(
+						'client_id' => array(
+							'type' => 'string'
+						),
+						'client_secret' => array(
+							'type' => 'string'
+						),					
+					)
+				),
+				'default' => array(
+					'client_id' => null,
+					'client_secret' => null
+				)							
+			)				
 		));	
-	}
-
-
-	public function register_salesforce_field() {
-		global $wp_rest_additional_fields, $wp_registered_settings;
-
-		register_rest_field(
-			'settings',
-			$this->plugin_name,
-			array(
-				'get_callback'    => array( $this, 'get_db_options' ),
-				'update_callback' => array( $this, 'set_db_options' )
-			)
-		);
-
-
-		
 	}
 
 	public function options_page_output() {
