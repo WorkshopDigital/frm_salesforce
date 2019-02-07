@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 import { updateClientId, updateClientSecret, saveFormData } from '../redux/actions'
 import PostBoxForm from '../components/post-box-form'
 
-const mapStateToProps = state => {
+const mapStateToProps = ({salesForceCredentials}) => {
 	return {
-		clientId: state.clientId, 
-		clientSecret: state.clientSecret,
+		clientId: salesForceCredentials.clientId, 
+		clientSecret: salesForceCredentials.clientSecret,
 	}
 }
 
@@ -23,7 +23,10 @@ const mapDispatchToProps = dispatch => {
 
 const VisiblePostBoxForm = connect( 
 	mapStateToProps, 
-	mapDispatchToProps 
+	mapDispatchToProps,
+// 	( stateProps, dispatchProps, ownProps ) => {
+// debugger;
+// 	}
 )(PostBoxForm)
 
 

@@ -1,9 +1,8 @@
 import React from 'react';
 import FormInput from './form-input';
 
-
 const PostBoxForm = ({ clientId, clientSecret, updateClientId, updateClientSecret, saveFormData }) => {
-
+	const hasCredentials = (clientId && clientSecret);
 	return (
 		<div className="inside">
 			<form method="post" action="options.php" onSubmit={saveFormData}>
@@ -27,15 +26,22 @@ const PostBoxForm = ({ clientId, clientSecret, updateClientId, updateClientSecre
 								<FormInput
 									id="client-secret"
 									name="frmsf[client_secret]"
-									type="text"
+									type="password"
 									className="widefat"
 									onChange={updateClientSecret}
 									value={clientSecret} />								
 							</td>
-						</tr>			
-						<tr>
-							<td><input type="submit" value="submit"/></td>
-						</tr>				
+						</tr>		
+						{hasCredentials &&	
+							<tr>
+								<td>
+									<input 
+										type="submit" 
+										className="button button-primary button-hero"
+										value="Authorize with Salesforce" />
+								</td>
+							</tr>		
+						}		
 					</tbody>
 				</table>
 			</form>
