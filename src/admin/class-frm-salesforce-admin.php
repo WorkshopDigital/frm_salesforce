@@ -41,6 +41,24 @@ class Frm_Salesforce_Admin {
 	private $version;
 
 	/**
+	 * The nonce name to validate with the WordPress Rest API
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 * @var      string    $wp_rest_nonce_name   The nonce verification name.
+	 */
+	private $wp_rest_nonce_name;	
+
+	/**
+	 * The nonce name to validate with the Salesforce oAuth redirect state
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 * @var      string    $salesforce_state_nonce_name   The nonce verification name.
+	 */
+	private $salesforce_state_nonce_name;		
+
+	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
@@ -51,7 +69,8 @@ class Frm_Salesforce_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-
+		$this->$wp_rest_nonce_name = 'wp_rest';
+		$this->$salesforce_state_nonce_name = 'sales_force_oauth_state';
 	}
 
 	/**
@@ -105,19 +124,24 @@ class Frm_Salesforce_Admin {
 	}
 
 	public function set_db_options($settings) {
-		print_r($settings);
 		update_option( $this->plugin_name, $settings );
 	}
 
-	private function create_nonce() {
+	private function create_wp_rest_nonce() {
 		return wp_create_nonce( 'wp_rest' );
 	}
 
+	private function create_sf_state_nonce() {
+		return wp_create_nonce( $this->$salesforce_state_nonce_name );
+	}	
+
 	private function serialize_props() {
 		return [
-			'endpoint' => esc_url_raw( rest_url() ),
-			'nonce'    => $this->create_nonce(),
-			'data'     => $this->get_db_options()
+			'endpoint'       => esc_url_raw( rest_url() ),
+			'redirect_url'   => admin_url( 'admin.php?page=' . $this->plugin_name ), 
+			'wp_rest_nonce'  => $this->create_wp_rest_nonce(),
+			'sf_state_nonce' => $this->create_sf_state_nonce(),
+			'data'           => $this->get_db_options()
 		];
 	}
 
@@ -134,7 +158,7 @@ class Frm_Salesforce_Admin {
 	}	
 
 	public function register_salesforce_setting() {
-		register_setting( 'general', $this->plugin_name,  array(
+		register_setting( 'general', $this->plugin_name, array(
 			'type' => 'object',
 			'description' => 'The Salesforce App Info',
 			'show_in_rest' => array(
@@ -156,8 +180,23 @@ class Frm_Salesforce_Admin {
 		));	
 	}
 
+	private function handle_oath_redirect() {
+		return (
+			isset($_REQUEST['code']) 
+			&& !empty($_REQUEST['code']) 
+			&& isset($_REQUEST['state'])  
+			&& !empty($_REQUEST['state'])
+			&& wp_verify_nonce($_REQUEST['state'], $this->$salesforce_state_nonce_name) 
+		);
+	}
+
 	public function options_page_output() {
-		include_once plugin_dir_path( dirname( __FILE__ ) ) .  'admin/partials/frm-salesforce-admin-display.php';
+		if($this->handle_oath_redirect()) {
+			include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/frm-salesforce-admin-redirect.php';
+		}
+		else {
+			include_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/frm-salesforce-admin-display.php';
+		}
 	}	
 
 }

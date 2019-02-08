@@ -17,18 +17,14 @@ const mapDispatchToProps = dispatch => {
 		saveFormData:       e => {
 			e.preventDefault();
 			dispatch(saveFormData(store.getState()))
-		}
+		},
+		getTokens: (code, urlParams) => dispatch(getTokens(code, urlParams, store.getState()))
 	}
 }
 
 const VisiblePostBoxForm = connect( 
 	mapStateToProps, 
-	mapDispatchToProps,
-// 	( stateProps, dispatchProps, ownProps ) => {
-// debugger;
-// 	}
+	mapDispatchToProps
 )(PostBoxForm)
-
-
 
 export default VisiblePostBoxForm

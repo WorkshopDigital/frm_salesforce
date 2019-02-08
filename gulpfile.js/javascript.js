@@ -21,11 +21,10 @@ function jsAdminReact() {
 		    Babel({
 		    	sourceType: 'unambiguous',
 		      babelrc: false,
-		      presets: ['@babel/preset-react'],
+		      presets: ['@babel/preset-react', '@babel/plugin-proposal-class-properties'],
 		    }),	     	      
 	      CommonJs()		    
       ]
-
     })
     .pipe(Source('frm-salesforce-admin.js'))
     .pipe(dest('dist/admin/js'));

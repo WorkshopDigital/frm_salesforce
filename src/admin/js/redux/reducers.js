@@ -12,12 +12,14 @@ const initialStateWpApi = {
 	apiError: false,
 	apiErrorMsg: '',
 	endpoint: null,
-	nonce: null
+	nonce: null,
+	redirectUrl: null
 }
 
 const initialStateSalesForceCredentials = {
 	clientId: null,
 	clientSecret: null,
+	stateNonce: null,
 }
 
 export function wpApi(state = initialStateWpApi, action) {

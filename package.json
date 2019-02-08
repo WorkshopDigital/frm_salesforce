@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
@@ -31,6 +32,7 @@
     "gulp-wrap": "^0.14.0",
     "handlebars": "^4.0.10",
     "node-sass": "^4.11.0",
+    "query-string": "^6.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",

@@ -1,5 +1,5 @@
-import React from 'react';
-import FormInput from './form-input';
+import React from 'react'
+import FormInput from './form-input'
 
 const PostBoxForm = ({ clientId, clientSecret, updateClientId, updateClientSecret, saveFormData }) => {
 	const hasCredentials = (clientId && clientSecret);
@@ -34,7 +34,7 @@ const PostBoxForm = ({ clientId, clientSecret, updateClientId, updateClientSecre
 						</tr>		
 						{hasCredentials &&	
 							<tr>
-								<td>
+								<td>							
 									<input 
 										type="submit" 
 										className="button button-primary button-hero"

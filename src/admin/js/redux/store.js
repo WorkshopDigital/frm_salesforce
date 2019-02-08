@@ -14,11 +14,13 @@ function initStore(props) {
 		{
 			salesForceCredentials: {
 				clientId: props.clientId,
-				clientSecret: props.clientSecret
+				clientSecret: props.clientSecret,
+				stateNonce: props.sfStateNonce
 			},
 			wpApi: {
 				endpoint: props.endpoint,
-				nonce: props.nonce
+				nonce: props.wpRestNonce,
+				redirectUrl: props.redirectUrl
 			}				
 		},
 		applyMiddleware(thunk)		
